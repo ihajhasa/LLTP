@@ -1,0 +1,18 @@
+Works:
+	Provable:
+		lolli(lolli(atom(a), lolli(atom(b),atom(c))), lolli(tensor(atom(a), atom(b)), atom(c)))
+		lolli(atom(a), atom(a))
+		lolli(tensor(atom(a), atom(b)), tensor(atom(a), atom(b)))
+
+	Not Provable:
+
+
+Drafts and Construction Section:
+
+---------------------------------------------------------------------------------------------------
+	lolli(atom(a), lolli(atom(b),atom(c)))
+	lolli(with(atom(a), atom(b)), atom(c))
+
+lolli(lolli(atom(a), lolli(atom(b),atom(c))), lolli(with(atom(a), atom(b)), atom(c)))
+---------------------------------------------------------------------------------------------------
+

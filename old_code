@@ -1,0 +1,72 @@
+//	This is not a valid way of getting F from the middle of the list
+//		use member instead.
+
+% tensor L
+prover_h(GAM, false, DN, [DPL|[tensor(A,B)|DPR]], [], ATOMS, C) :-
+	append(DPL, DPR, DP),
+	add_to_appropriate_list(A, DN, DP, ATOMS, DN2, DP2, ATOMS2),
+	add_to_appropriate_list(B, DN2, DP2, ATOMS2, DN3, DP3, ATOMS3),
+	prover_h(GAM, false, DN3, DP3, [], ATOMS3, C).
+% one L
+prover_h(GAM, false, DN, [DPL|[one|DPR]], [], ATOMS, C) :-
+	append(DPL, DPR, DP),
+	prover_h(GAM, false, DN, DP, [], ATOMS, C).
+%	plus L
+prover_h(GAM, false, DN, [DPL|[plus(A,B)|DPR]], [], ATOMS, C) :-
+	append(DPL, DPR, DP),
+	add_to_appropriate_list(A, DN, DP, ATOMS, DN2, DP2, ATOMS2),
+	prover_h(GAM, false, DN2, DP2, [], ATOMS2, C),
+	add_to_appropriate_list(B, DN, DP, ATOMS, DN3, DP3, ATOMS3),
+	prover_h(GAM, false, DN3, DP3, [], ATOMS3, C).
+%bang L
+prover_h(GAM, false, DN, [DPL|[bang(A)|DPR]], [], ATOMS, C) :-
+	append(DPL, DPR, DP), append([A], GAM, GAM2),
+	prover_h(GAM2, false, DN, DP, [], ATOMS, C).
+%focus R
+prover_h(GAM, false, DN, [], [], ATOMS, C) :- 
+	is_positive(C),
+	prover_h(GAM, false, DN, [], [C], ATOMS, C).
+%focus L
+prover_h(GAM, false, [DNL|[N|DNR]], [], [], ATOMS, C) :-
+	append(DNL, DNR, DN),
+	append([N], DN, DN2),
+	prover_h(GAM, false, DN2, [], [N], ATOMS, C).
+%focus bang
+prover_h([GAML|[F|GAMR]], false, DN, [], [], ATOMS, C) :-
+	append(GAML, [F], GAM1), append(GAM1, GAMR, GAM2),
+	prover_h(GAM2, false, DN, [], [F], ATOMS, C).
+% with L
+prover_h(GAM, false, DN, [], [with(A,_)], ATOMS, C) :-
+	prover_h(GAM, false, DN, [A], ATOMS, C).
+prover_h(GAM, false, DN, [], [with(_,B)], ATOMS, C) :-
+	prover_h(GAM, false, DN, [B], ATOMS, C).
+% lolli L
+prover_h(GAM, false, DN, [], [lolli(A,B)], ATOMS, C) :-
+	split(DN, DNL, DNR),
+	split(ATOMS, ATOMSL, ATOMSR),
+	prover_h(GAM, false, DNL, [], [A], ATOMSL, A),
+	prover_h(GAM, false, DNR, [], [B], ATOMSR, C).
+% tensor R
+prover_h(GAM, false, DN, [], [tensor(A,B)], ATOMS, tensor(A,B)) :-
+	split(DN, DNL, DNR),
+	split(ATOMS, ATOMSL, ATOMSR),
+	prover_h(GAM, false, DNL, [], [A], ATOMSL, A),
+	prover_h(GAM, false, DNR, [], [B], ATOMSR, B).
+% plus R
+prover_h(GAM, false, DN, [], [plus(A,B)], ATOMS, plus(A,B)) :-
+	prover_h(GAM, false, DN, [], [A], ATOMS, A).
+prover_h(GAM, false, DN, [], [plus(A,B)], ATOMS, plus(A,B)) :-
+	prover_h(GAM, false, DN, [], [B], ATOMS, B).
+% bang R
+prover_h(GAM, false, [], [], [bang(A)], ATOMS, bang(A)) :-
+	prover_h(GAM, false, [], [], [], ATOMS, A).
+% blur R
+prover_h(GAM, false, DN, [], [N], ATOMS, N) :-
+	is_negative(N),
+	prover_h(GAM, false, DN, [], [], ATOMS, N).
+%blur L
+prover_h(GAM, false, DN, [], [P], ATOMS, C) :-
+	is_positive(P),
+	prover_h(GAM, false, DN, [P], [], ATOMS, C).
+% one R
+prover_h(_, false, [], [], [one], [], one).
