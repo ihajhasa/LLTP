@@ -27,12 +27,12 @@ Here is a listing of all files
 [RUN-3] How to Run
 ---------------------------------------------------------------------------------------------------------
                     
-run LLTP
+                    run LLTP
                     1. $ gprolog
                     2. $ ['LLTP'].
                     3. $ prover(__insert_formula_here__)
 
-run LLTP_2
+                    run LLTP_2
                     1. $ gprolog
                     2. $ ['LLTP_2'].
                     3. $ prover(__insert_formula_here__)
