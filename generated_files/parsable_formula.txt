@@ -1,0 +1,56 @@
+ (ATOM "a")  LOLLI  (ATOM "a") 
+
+(( (ATOM "a")  LOLLI  (ATOM "b") ) TENSOR ( (ATOM "b")  LOLLI  (ATOM "c") ) ) LOLLI ( (ATOM "a")  LOLLI  (ATOM "c") )
+
+(( (ATOM "a")  LOLLI  ((ATOM "b")  LOLLI  (ATOM "c")) ) ) LOLLI ( (ATOM "b")  LOLLI  ((ATOM "a")  LOLLI  (ATOM "c")) )
+
+(( (ATOM "a")  LOLLI  ((ATOM "b")  LOLLI  (ATOM "c")) ) ) LOLLI ( ((ATOM "a")  WITH  (ATOM "b"))  LOLLI  (ATOM "c") )
+
+(( ((ATOM "a")  WITH  (ATOM "b"))  LOLLI  (ATOM "c") ) ) LOLLI ( (ATOM "a")  LOLLI  ((ATOM "b")  LOLLI  (ATOM "c")) )
+
+(( (ATOM "a")  LOLLI  (ATOM "b") ) ) LOLLI ( ((ATOM "b")  LOLLI  (ATOM "c"))  LOLLI  ((ATOM "a")  LOLLI  (ATOM "c")) )
+
+(( (ATOM "a")  LOLLI  (ATOM "b") ) ) LOLLI ( ((ATOM "c")  LOLLI  (ATOM "a"))  LOLLI  ((ATOM "c")  LOLLI  (ATOM "b")) )
+
+(( (ATOM "a")  LOLLI  (ATOM "b") ) ) LOLLI ( ((ATOM "a")  WITH  (ATOM "c"))  LOLLI  ((ATOM "b")  WITH  (ATOM "c")) )
+
+(( (ATOM "a")  LOLLI  (ATOM "b") ) ) LOLLI ( ((ATOM "c")  WITH  (ATOM "a"))  LOLLI  ((ATOM "c")  WITH  (ATOM "b")) )
+
+(( (ATOM "b") ) ) LOLLI ( (ATOM "a")  LOLLI  (ATOM "b") )
+
+(( (ATOM "a")  LOLLI  (ATOM "b") ) TENSOR ( (ATOM "b")  LOLLI  (ATOM "a") ) ) LOLLI ( (ATOM "a")  BILOLLI  (ATOM "b") )
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) ) LOLLI ( (ATOM "a")  LOLLI  (ATOM "b") )
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) ) LOLLI ( (ATOM "b")  LOLLI  (ATOM "a") )
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) TENSOR ( (ATOM "a") ) ) LOLLI ( (ATOM "b") )
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) TENSOR ( (ATOM "b") ) ) LOLLI ( (ATOM "a") )
+
+ (ATOM "a")  BILOLLI  (ATOM "a") 
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) ) LOLLI ( (ATOM "b")  BILOLLI  (ATOM "a") )
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) TENSOR ( (ATOM "b")  BILOLLI  (ATOM "c") ) ) LOLLI ( (ATOM "a")  BILOLLI  (ATOM "c") )
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) ) LOLLI ( ((ATOM "a")  LOLLI  (ATOM "c"))  BILOLLI  ((ATOM "b")  LOLLI  (ATOM "c")) )
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) ) LOLLI ( ((ATOM "c")  LOLLI  (ATOM "a"))  BILOLLI  ((ATOM "c")  LOLLI  (ATOM "b")) )
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) ) LOLLI ( ((ATOM "a")  WITH  (ATOM "c"))  BILOLLI  ((ATOM "b")  WITH  (ATOM "c")) )
+
+(( (ATOM "a")  BILOLLI  (ATOM "b") ) ) LOLLI ( ((ATOM "c")  WITH  (ATOM "a"))  BILOLLI  ((ATOM "c")  WITH  (ATOM "b")) )
+
+ (((ATOM "a")  WITH  (ATOM "b"))  WITH  (ATOM "c"))  BILOLLI  ((ATOM "a")  WITH  ((ATOM "b")  WITH  (ATOM "c"))) 
+
+ ((ATOM "a")  WITH  (ATOM "b"))  BILOLLI  ((ATOM "b")  WITH  (ATOM "a")) 
+
+ ((ATOM "a")  WITH  (ATOM "a"))  BILOLLI  (ATOM "a") 
+
+(( (ATOM "a") ) ) LOLLI ( ((ATOM "a")  LOLLI  (ATOM "b"))  BILOLLI  (ATOM "b") )
+
+(( (ATOM "b") ) ) LOLLI ( ((ATOM "a")  LOLLI  (ATOM "b"))  BILOLLI  (ATOM "b") )
+
+(( (ATOM "b") ) ) LOLLI ( ((ATOM "a")  WITH  (ATOM "b"))  BILOLLI  (ATOM "a") )
+

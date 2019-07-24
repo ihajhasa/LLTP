@@ -7,6 +7,7 @@
 %	Notes:
 %		I will translate this to SML eventually, but prolog automatically
 %		handles backtracking (and trying different splits).
+%		Atoms are positive
 
 
 

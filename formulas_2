@@ -1,0 +1,20 @@
+Works:
+
+	Provable:
+		atom a lolli atom a
+		((atom a lolli atom b) * (atom b lolli atom c)) lolli (atom a lolli atom c)
+		(atom a * atom b) lolli (atom b * atom a)
+		(atom a * atom b) lolli (atom a * atom b)
+
+	Not Provable:
+		(atom a * atom b) lolli (atom b * atom b)
+		(atom a * atom b) lolli (atom a * atom a)
+
+Doesn't work:
+
+	Provable:
+
+	Not Provable:
+
+
+Drafts and Construction Section:

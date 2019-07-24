@@ -1,0 +1,58 @@
+['LLTP_2'].
+
+prover( ( atom a) lolli ( atom a) ).
+
+prover( ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom c))) lolli (( atom a) lolli ( atom c)) ).
+
+prover( (( atom a) lolli (( atom b) lolli ( atom c))) lolli (( atom b) lolli (( atom a) lolli ( atom c))) ).
+
+prover( (( atom a) lolli (( atom b) lolli ( atom c))) lolli ((( atom a) & ( atom b)) lolli ( atom c)) ).
+
+prover( ((( atom a) & ( atom b)) lolli ( atom c)) lolli (( atom a) lolli (( atom b) lolli ( atom c))) ).
+
+prover( (( atom a) lolli ( atom b)) lolli ((( atom b) lolli ( atom c)) lolli (( atom a) lolli ( atom c))) ).
+
+prover( (( atom a) lolli ( atom b)) lolli ((( atom c) lolli ( atom a)) lolli (( atom c) lolli ( atom b))) ).
+
+prover( (( atom a) lolli ( atom b)) lolli ((( atom a) & ( atom c)) lolli (( atom b) & ( atom c))) ).
+
+prover( (( atom a) lolli ( atom b)) lolli ((( atom c) & ( atom a)) lolli (( atom c) & ( atom b))) ).
+
+prover( ( atom b) lolli (( atom a) lolli ( atom b)) ).
+
+prover( ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) lolli ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) ).
+
+prover( ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) lolli (( atom a) lolli ( atom b)) ).
+
+prover( ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) lolli (( atom b) lolli ( atom a)) ).
+
+prover( (((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) * ( atom a)) lolli ( atom b) ).
+
+prover( (((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) * ( atom b)) lolli ( atom a) ).
+
+prover( (( atom a) lolli ( atom a)) * (( atom a) lolli ( atom a)) ).
+
+prover( ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) lolli ((( atom b) lolli ( atom a)) * (( atom a) lolli ( atom b))) ).
+
+prover( (((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) * ((( atom b) lolli ( atom c)) * (( atom c) lolli ( atom b)))) lolli ((( atom a) lolli ( atom c)) * (( atom c) lolli ( atom a))) ).
+
+prover( ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) lolli (((( atom a) lolli ( atom c)) lolli (( atom b) lolli ( atom c))) * ((( atom b) lolli ( atom c)) lolli (( atom a) lolli ( atom c)))) ).
+
+prover( ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) lolli (((( atom c) lolli ( atom a)) lolli (( atom c) lolli ( atom b))) * ((( atom c) lolli ( atom b)) lolli (( atom c) lolli ( atom a)))) ).
+
+prover( ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) lolli (((( atom a) & ( atom c)) lolli (( atom b) & ( atom c))) * ((( atom b) & ( atom c)) lolli (( atom a) & ( atom c)))) ).
+
+prover( ((( atom a) lolli ( atom b)) * (( atom b) lolli ( atom a))) lolli (((( atom c) & ( atom a)) lolli (( atom c) & ( atom b))) * ((( atom c) & ( atom b)) lolli (( atom c) & ( atom a)))) ).
+
+prover( (((( atom a) & ( atom b)) & ( atom c)) lolli (( atom a) & (( atom b) & ( atom c)))) * ((( atom a) & (( atom b) & ( atom c))) lolli ((( atom a) & ( atom b)) & ( atom c))) ).
+
+prover( ((( atom a) & ( atom b)) lolli (( atom b) & ( atom a))) * ((( atom b) & ( atom a)) lolli (( atom a) & ( atom b))) ).
+
+prover( ((( atom a) & ( atom a)) lolli ( atom a)) * (( atom a) lolli (( atom a) & ( atom a))) ).
+
+prover( ( atom a) lolli (((( atom a) lolli ( atom b)) lolli ( atom b)) * (( atom b) lolli (( atom a) lolli ( atom b)))) ).
+
+prover( ( atom b) lolli (((( atom a) lolli ( atom b)) lolli ( atom b)) * (( atom b) lolli (( atom a) lolli ( atom b)))) ).
+
+prover( ( atom b) lolli (((( atom a) & ( atom b)) lolli ( atom a)) * (( atom a) lolli (( atom a) & ( atom b)))) ).
+
