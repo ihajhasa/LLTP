@@ -43,6 +43,18 @@ Here is a listing of all files
                     
                     1. $ python execute_program.py
                     2. $ swipl < generated_files/prolog_input.txt
+                    
+                    1. $ swipl
+                    2. $ ['LLTP_2'].
+                    3. $ prover( __insert_forumla_here__)
+                    
+                    Formula Notation:
+                        atom (%char)
+                        ! A             // bang
+                        A + B           // plus
+                        A lolli B       // lolli
+                        A * B           // tensor
+                        A & B           // with
 
 
 [PRO-4] General Info, Points, and Issues
