@@ -8,6 +8,7 @@
         [RUN-3] How to Run
         [GEN-4] General Info, Points, and Issues
         [IMP-5] Current Calculi LLTP Based On
+        [REF-6] Resources and References
         
 
 
@@ -76,3 +77,7 @@ Here is a listing of all files
 ![alt text](https://github.com/ihajhasa/LLTP/blob/master/calculi_1.png "LL Calculi - Giselle Reis")
 
 Note: Quantifiers are not implemented.
+
+[REF-6] Resources and References
+---------------------------------------------------------------------------------------------------------
+        Benchmark of problems for linear logic provers ![LINK](https://github.com/meta-logic/lltp)
