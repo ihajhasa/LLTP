@@ -80,4 +80,4 @@ Note: Quantifiers are not implemented.
 
 [REF-6] Resources and References
 ---------------------------------------------------------------------------------------------------------
-        Benchmark of problems for linear logic provers ![LINK](https://github.com/meta-logic/lltp)
+        Benchmark of problems for linear logic provers https://github.com/meta-logic/lltp
